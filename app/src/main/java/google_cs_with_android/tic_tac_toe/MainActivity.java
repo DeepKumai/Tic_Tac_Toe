@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(settingsIntent, 0);
             return true;
         }
+        else if(id==R.id.action_help){
+            Intent intent = (new Intent(MainActivity.this, helper.class));
+            startActivity (intent);
+            return true;
+        }
         else if(id == R.id.exit){
             finish();
             System.exit(0);
@@ -171,6 +176,11 @@ public class MainActivity extends AppCompatActivity {
             boardView = new BoardView(MainActivity.this);
             boardView.init(playAgainstCom, playerMark, firstTurn, names, speech);
         }
+        /*else if (requestCode == 1) {
+            Intent intent = (new Intent(MainActivity.this, helper.class));
+            startActivity (intent);
+
+        }*/
     }
 
     @Override
